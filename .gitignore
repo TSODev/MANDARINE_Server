@@ -1,0 +1,12 @@
+dist
+node_modules
+.env
+.vscode
+launch.json
+.DS_STORE
+docker-compose*
+
+server/authentication/private.key
+server/common/tsodev.crt
+server/common/tsodev.key
+server/authentication/public.key

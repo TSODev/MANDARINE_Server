@@ -1,0 +1,62 @@
+{
+  "name": "MANDARINE",
+  "version": "1.0.0",
+  "description": "Express Mandarine RestAPI server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "compile": "ts-node build.ts && tsc",
+    "dev": "nodemon server/index.ts | pino-pretty --translateTime --levelFirst",
+    "dev:secure": "nodemon server/index.ts --secure | pino-pretty --translateTime --levelFirst",
+    "server": "./node_modules/.bin/nodemon  -w ./server --ext \".ts\" --exec \"npm run dev:secure\"",
+    "dev:debug": "nodemon --exec 'node -r ts-node/register --inspect-brk' server/index.ts | pino-pretty --translateTime",
+    "test": "mocha test/**/*.ts --exit",
+    "test:debug": "mocha --inspect-brk test/**/*.ts --exit"
+  },
+  "license": "See license in <license.txt> file",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/TSODev/MANDARINE"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^7.2.8",
+    "@types/mongoose": "^5.2.20",
+    "argon2": "^0.19.3",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.2",
+    "fast-xml-parser": "^3.15.1",
+    "helmet": "^3.21.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.22.2",
+    "mongoose": "^5.7.7",
+    "nan": "^2.14.0",
+    "pino": "^5.5.0",
+    "ramda": "^0.26.1",
+    "socket.io": "^2.3.0",
+    "swagger-express-middleware": "^1.1.1",
+    "underscore": "^1.9.1",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.24",
+    "@types/chai": "^4.1.4",
+    "@types/express": "^4.16.0",
+    "@types/mocha": "^5.2.5",
+    "@types/pino": "^5.20.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "nodemon": "^1.18.4",
+    "pino-pretty": "^2.2.0",
+    "shelljs": "^0.8.2",
+    "supertest": "^3.3.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.3"
+  },
+  "author": "Thierry Soulie <thierry.soulie@tsodev.fr>"
+}
