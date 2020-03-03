@@ -27,4 +27,4 @@ MENTHE_SERVER/server/common/tsodev.key
 MENTHE_SERVER/server/authentication/public.key
 
 
-docker run --rm -it -p 3000:3000/tcp tsodev/mandarine:1.2
+docker run --rm -it -p 3000:3000/tcp tsodev/mandarine:latest
